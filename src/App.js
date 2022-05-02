@@ -44,7 +44,7 @@ class App extends React.Component {
       .collection('products')
       // .where('price', '==', 99)
       // .where('title', '==', 'Watch')
-      // .orderBy('price', 'desc')
+      .orderBy('price', 'asc')
       .onSnapshot((snapshot) => {
         // console.log(snapshot);
         
@@ -196,7 +196,7 @@ class App extends React.Component {
         ></Cart>
         {loading && <h1>Loading Products ...</h1>}
         <div style={ {padding: 10, fontSize: 20} }>
-          Total: Rs {this.getCartTotal()}
+          Total: $ {this.getCartTotal()}
         </div>
       </div>
     );
